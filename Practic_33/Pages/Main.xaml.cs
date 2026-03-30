@@ -34,6 +34,7 @@ namespace Practic_33.Pages
 
             Timer.Tick += Timer_Tick;
             Timer.Start();
+            LoadUsers();
         }
 
         private void Timer_Tick(object? sender, EventArgs e)
