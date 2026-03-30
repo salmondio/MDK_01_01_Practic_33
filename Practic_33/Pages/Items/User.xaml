@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="Practic_33.Pages.Items.User"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Practic_33.Pages.Items"
+             mc:Ignorable="d">
+    <Grid Height="50" Margin="0,0,0,5">
+        <!-- Аватар пользователя (круглое изображение) -->
+        <Image
+            x:Name="imgUser"
+            Margin="10,0,0,0"
+            Width="30"
+            Height="30"
+            HorizontalAlignment="Left"
+            Source="/Images/ic-user.png">
+            <Image.Clip>
+                <!-- Делает изображение круглым (радиус скругления = половине размера) -->
+                <RectangleGeometry
+                    RadiusX="15"
+                    RadiusY="15"
+                    Rect="0,0,30,30"/>
+            </Image.Clip>
+        </Image>
+
+        <!-- Индикатор «онлайн» (маленький кружок) -->
+        <Image
+            Width="10"
+            Height="10"
+            Margin="30,30,0,0"
+            HorizontalAlignment="Left"
+            Source="/Images/ic-online.png"
+            Visibility="Hidden"/>
+
+        <!-- ФИО пользователя (жирный шрифт, сверху) -->
+        <Label
+            x:Name="FIO"
+            Content="Иванов Иван Иванович"
+            Margin="45,0,0,0"
+            VerticalAlignment="Top"
+            FontWeight="Bold"
+            FontSize="10"/>
+
+        <!-- Дополнительная информация (например, статус, снизу) -->
+        <Label
+            Content="…"
+            Margin="45,26,0,0"
+            VerticalAlignment="Top"
+            FontSize="10"/>
+    </Grid>
+</UserControl>
